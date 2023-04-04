@@ -4,7 +4,7 @@ import { calShabu } from "../shabu"
 
 describe('cal shabu', () => {
   const mock = new Mockadapter(axios)
- 
+
   test.each([
     {
       num: 1, expectedResult: 374,
@@ -38,7 +38,8 @@ describe('cal shabu', () => {
       data:
       {
         price: 340,
-        serviceChange: 10
+        serviceChange: 10,
+        promotion: 4
       }
     });
     expect(await calShabu(num)).toBe(expectedResult);
